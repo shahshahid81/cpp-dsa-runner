@@ -21,7 +21,7 @@
     {
       "label": "compile and run",
       "type": "shell",
-      "command": "g++ -std=c++17 -g -Wall -o \"${fileBasenameNoExtension}\" \"${file}\" && ./${fileBasenameNoExtension} < input.txt > output.txt",
+      "command": "g++ -std=c++17 -g -Wall -o \"${fileBasenameNoExtension}\" \"${file}\" && ./${fileBasenameNoExtension} < input.txt > output.txt 2>&1 || echo \"Compilation failed\" >> output.txt",
       "group": {
         "kind": "build",
         "isDefault": true
